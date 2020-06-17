@@ -16,17 +16,15 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<sonar.projectKey>karthiks07_user</sonar.projectKey>
-  		<sonar.organization>karthiks07</sonar.organization>
-  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  		<sonar.login>dbf74df9fe67ebe9a4d64457450a2028e9744c35</sonar.login>
+<sonar.projectKey>karthiks07_user</sonar.projectKey>
+  <sonar.organization>karthiks07</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>dbf74df9fe67ebe9a4d64457450a2028e9744c35</sonar.login>
 
 
 	</properties>
   
-  <dependencyManagement>
+ <dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -38,65 +36,50 @@
 		</dependencies>
 	</dependencyManagement>
 
+	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		
-		
-		
 		<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>  
-		
+</dependency>  
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.oracle.ojdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			</dependency>
-				
-		
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.3.7.Final</version>
+</dependency>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<dependency>
-			  <groupId>org.glassfish.jaxb</groupId>
-			  <artifactId>jaxb-runtime</artifactId>
-			  </dependency>
-		
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			
 		</dependency>
-		
+
 		<dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.lettuce</groupId>
-                        <artifactId>lettuce-core</artifactId>
-                    </exclusion>
-                </exclusions>    
-            </dependency>
-            <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-            </dependency>
-		
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -105,7 +88,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
 		</plugins>
 	</build>
+
+<repositories>
+
+
+<repository>
+
+<id>spring-milestones</id>
+
+<name>Spring Milestones</name>
+
+<url>https://repo.spring.io/milestone</url>
+
+</repository>
+
+</repositories>
 </project>
